@@ -1,18 +1,18 @@
 // Данные интерактивных карт Escape from Tarkov
 // Источник: https://escapefromtarkov.fandom.com/wiki/
 
-// Прямые ссылки на изображения карт
+// Прямые ссылки на изображения карт (wiki-tarkov.ru)
 const MAP_IMAGES = {
   factory: "https://wiki-tarkov.ru/img/maps/zavod_prev.jpg",
-  customs: "https://wiki-tarkov.ru/img/maps/tamozhnya_prev.jpg",
-  woods: "https://wiki-tarkov.ru/img/maps/les_prev.jpg",
-  shoreline: "https://wiki-tarkov.ru/img/maps/bereg_prev.jpg",
-  interchange: "https://wiki-tarkov.ru/img/maps/razvyazka_prev.jpg",
-  reserve: "https://wiki-tarkov.ru/img/maps/rezerv_prev.jpg",
-  labs: "https://wiki-tarkov.ru/img/maps/laboratoriya_prev.jpg",
-  lighthouse: "https://wiki-tarkov.ru/img/maps/mayak_prev.jpg",
-  streets: "https://wiki-tarkov.ru/img/maps/ulicy_prev.jpg",
-  ground_zero: "https://wiki-tarkov.ru/img/maps/epicentr_prev.jpg",
+  customs: "https://wiki-tarkov.ru/img/maps/karta_tamozhnya_preview.png",
+  woods: "https://wiki-tarkov.ru/img/maps/forest_prev.jpg",
+  shoreline: "https://wiki-tarkov.ru/img/maps/karta_bereg_preview.png",
+  interchange: "https://wiki-tarkov.ru/img/maps/razvyazka_small.jpg",
+  reserve: "https://wiki-tarkov.ru/img/maps/rezerv.jpg",
+  labs: "https://wiki-tarkov.ru/img/maps/terra-group.png",
+  lighthouse: "https://wiki-tarkov.ru/img/maps/lighthouse.jpg",
+  streets: "https://wiki-tarkov.ru/img/maps/streets-of-tarkov.jpg",
+  ground_zero: "https://wiki-tarkov.ru/img/maps/epicenter.png",
 };
 
 const MAPS_DATA = {
