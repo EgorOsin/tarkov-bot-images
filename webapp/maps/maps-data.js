@@ -13,6 +13,7 @@ const MAP_IMAGES = {
   lighthouse: "https://raw.githubusercontent.com/V-Power-Inc/wiki-tarkov/master/web/img/maps/lighthouse.jpg",
   streets: "https://raw.githubusercontent.com/V-Power-Inc/wiki-tarkov/master/web/img/maps/streets-of-tarkov.jpg",
   ground_zero: "https://raw.githubusercontent.com/V-Power-Inc/wiki-tarkov/master/web/img/maps/epicenter.png",
+  labyrinth: "https://raw.githubusercontent.com/V-Power-Inc/wiki-tarkov/master/web/img/maps/labyrinth-loc.png",
 };
 
 const MAPS_DATA = {
@@ -224,6 +225,22 @@ const MAPS_DATA = {
       { categoryId: "exfil_pmc", position: [4500, 2000], popup: { title: "Проспект Мира", description: "Восток" }},
       { categoryId: "exfil_pmc", position: [500, 2000], popup: { title: "Полицейский КПП", description: "Запад" }},
       { categoryId: "quest", position: [2500, 2000], popup: { title: "Центр", description: "Квесты новичков" }},
+    ]
+  },
+  
+  labyrinth: {
+    name_ru: "Лабиринт",
+    mapImage: MAP_IMAGES.labyrinth,
+    mapBounds: [[0, 0], [4000, 4000]],
+    categories: [
+      { id: "exfil_pmc", name: "Выходы", color: "#00ff00" },
+      { id: "spawn_boss", name: "Босс", color: "#ff0000" },
+      { id: "locked", name: "Двери", color: "#ff3399" },
+    ],
+    markers: [
+      { categoryId: "exfil_pmc", position: [3500, 2000], popup: { title: "Катакомбы", description: "Выход" }},
+      { categoryId: "exfil_pmc", position: [500, 2000], popup: { title: "Канализация", description: "Выход" }},
+      { categoryId: "spawn_boss", position: [2000, 2000], popup: { title: "Культист", description: "В темноте" }},
     ]
   },
 };
