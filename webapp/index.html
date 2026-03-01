@@ -226,27 +226,30 @@
         let activeCategories = new Set();
         
         const MAPS_INFO = [
-            { id: "factory", name: "Завод", icon: "🏗️", markers: 45 },
-            { id: "customs", name: "Таможня", icon: "🏭", markers: 95 },
-            { id: "woods", name: "Лес", icon: "🌲", markers: 87 },
-            { id: "shoreline", name: "Берег", icon: "🏨", markers: 110 },
-            { id: "interchange", name: "Развязка", icon: "🏬", markers: 128 },
-            { id: "reserve", name: "Резерв", icon: "🏰", markers: 102 },
-            { id: "labs", name: "Лаборатория", icon: "🧪", markers: 78 },
-            { id: "lighthouse", name: "Маяк", icon: "🗼", markers: 92 },
-            { id: "streets", name: "Улицы", icon: "🏙️", markers: 156 },
-            { id: "ground_zero", name: "Эпицентр", icon: "☢️", markers: 68 },
+            { id: "factory", name: "Завод", icon: "🏗️" },
+            { id: "customs", name: "Таможня", icon: "🏭" },
+            { id: "woods", name: "Лес", icon: "🌲" },
+            { id: "shoreline", name: "Берег", icon: "🏨" },
+            { id: "interchange", name: "Развязка", icon: "🏬" },
+            { id: "reserve", name: "Резерв", icon: "🏰" },
+            { id: "labs", name: "Лаборатория", icon: "🧪" },
+            { id: "lighthouse", name: "Маяк", icon: "🗼" },
+            { id: "streets", name: "Улицы Таркова", icon: "🏙️" },
+            { id: "ground_zero", name: "Эпицентр", icon: "☢️" },
         ];
         
         function renderMapList() {
             const container = document.getElementById('map-list');
-            container.innerHTML = MAPS_INFO.map(m => `
+            container.innerHTML = MAPS_INFO.map(m => {
+                const mapData = MAPS_DATA[m.id];
+                const markerCount = mapData ? mapData.markers.length : 0;
+                return `
                 <div class="map-card" onclick="openMap('${m.id}')">
                     <div class="icon">${m.icon}</div>
                     <div class="name">${m.name}</div>
-                    <div class="markers">${m.markers} маркеров</div>
+                    <div class="markers">${markerCount} маркеров</div>
                 </div>
-            `).join('');
+            `}).join('');
         }
         
         function openMap(mapId) {
