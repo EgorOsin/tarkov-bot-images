@@ -1,18 +1,18 @@
 // Данные интерактивных карт Escape from Tarkov
 // Источник: https://escapefromtarkov.fandom.com/wiki/
 
-// Прямые ссылки на изображения карт (CDN)
+// Прямые ссылки на изображения карт
 const MAP_IMAGES = {
-  interchange: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/b4/Interchange_Interactive_Map_Base.webp",
-  customs: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/4/4c/Customs_Interactive_Map_Base.webp",
-  woods: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/f/f5/Woods_Interactive_Map_Base.webp",
-  shoreline: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a3/Shoreline_Interactive_Map_Base.webp",
-  reserve: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/9/9d/Reserve_Interactive_Map_Base.webp",
-  factory: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/7/7e/Factory_Interactive_Map_Base.webp",
-  labs: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/9/96/Labs_Interactive_Map_Base.webp",
-  lighthouse: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/5/5a/Lighthouse_Interactive_Map_Base.webp",
-  streets: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/e/e3/Streets_Interactive_Map_Base.webp",
-  ground_zero: "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a1/Ground_Zero_Interactive_Map_Base.webp",
+  factory: "https://wiki-tarkov.ru/img/maps/zavod_prev.jpg",
+  customs: "https://wiki-tarkov.ru/img/maps/tamozhnya_prev.jpg",
+  woods: "https://wiki-tarkov.ru/img/maps/les_prev.jpg",
+  shoreline: "https://wiki-tarkov.ru/img/maps/bereg_prev.jpg",
+  interchange: "https://wiki-tarkov.ru/img/maps/razvyazka_prev.jpg",
+  reserve: "https://wiki-tarkov.ru/img/maps/rezerv_prev.jpg",
+  labs: "https://wiki-tarkov.ru/img/maps/laboratoriya_prev.jpg",
+  lighthouse: "https://wiki-tarkov.ru/img/maps/mayak_prev.jpg",
+  streets: "https://wiki-tarkov.ru/img/maps/ulicy_prev.jpg",
+  ground_zero: "https://wiki-tarkov.ru/img/maps/epicentr_prev.jpg",
 };
 
 const MAPS_DATA = {
@@ -22,18 +22,18 @@ const MAPS_DATA = {
     mapBounds: [[0, 0], [9600, 5402]],
     origin: "bottom-left",
     categories: [
-      { id: "exfil_pmc", name: "Выходы PMC", color: "#00ff00", icon: "🚪" },
-      { id: "exfil_scav", name: "Выходы Scav", color: "#00cc00", icon: "🚪" },
+      { id: "exfil_pmc", name: "Выходы ЧВК", color: "#00ff00", icon: "🚪" },
+      { id: "exfil_scav", name: "Выходы Дикий", color: "#00cc00", icon: "🚪" },
       { id: "exfil_transit", name: "Транзит", color: "#0099ff", icon: "🚌" },
-      { id: "spawn_pmc", name: "Спавн PMC", color: "#ff6600", icon: "👤" },
-      { id: "spawn_scav", name: "Спавн Scav", color: "#ffcc00", icon: "🎭" },
+      { id: "spawn_pmc", name: "Спавн ЧВК", color: "#ff6600", icon: "👤" },
+      { id: "spawn_scav", name: "Спавн Дикий", color: "#ffcc00", icon: "🎭" },
       { id: "spawn_boss", name: "Спавн Босса", color: "#ff0000", icon: "💀" },
       { id: "lever", name: "Рычаги", color: "#9900ff", icon: "🔘" },
       { id: "locked", name: "Запертые двери", color: "#ff3399", icon: "🔒" },
       { id: "quest", name: "Квестовые точки", color: "#ffff00", icon: "❗" },
       { id: "loot_key", name: "Спавн ключей", color: "#ffd700", icon: "🔑" },
-      { id: "loot_keycard", name: "Спавн карт доступа", color: "#ff1493", icon: "💳" },
-      { id: "stationarygun", name: "Станковое оружие", color: "#8b0000", icon: "🔫" },
+      { id: "loot_keycard", name: "Карты доступа", color: "#ff1493", icon: "💳" },
+      { id: "stationarygun", name: "Турель", color: "#8b0000", icon: "🔫" },
     ],
     markers: [
       { categoryId: "exfil_transit", position: [1551, 60], popup: { title: "Транзит на Таможню", description: "Доступен через 1 мин после начала рейда" }},
